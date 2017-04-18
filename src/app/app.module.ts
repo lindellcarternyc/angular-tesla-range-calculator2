@@ -1,8 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+/*
+ * app.module.ts
+ */
 
+// Angular modules
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule }       from '@angular/core';
+
+// Custum modules
+import { TeslaBatteryModule } from './tesla-battery/tesla-battery.module';
+
+// App component
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -11,10 +18,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    TeslaBatteryModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+
+  ], 
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {}
